@@ -1,0 +1,162 @@
+﻿
+@model Genesys.Modelos.Empleado //como recibe al modelo bodega seleccionamos el proyecto donde esta el modelo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var titulo = "Crear Empleado"; //Creamos una variable titulo que va a cambiar de acuerdo a lo que estemos haciendo
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+@*Vamos a crear el formulario donde van a estar todos nuestros inputs, ya que vamos a mandar informacion, le vamos a poner el metodo post*@
+<form method="post">
+    <div style="padding-left:15%; padding-right:15%; padding-bottom:inherit.4rem;">
+        <div class="row border-0">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div> @*le decimos que todas las validaciones que tenga el modelo se muestren en este div*@
+        </div>
+        @*usamos c# para preguntar si el ide es =! de cero que cambie el titulo, como es c# se inicia con arroba*@
+        @if (Model.IdEmpleado != 0)
+        {
+            //Actualizar
+            titulo = "Actualizar Empleado";
+            <input type="hidden" asp-for="IdEmpleado" />
+            //no quiero que el id se vea pero hay que mandarlo, asp-for deja entrar a las propiedades del modelo, en este caso id
+        }
+        <div class="col-12 border-bottom p-0">
+            <h2 class="text-primary">@titulo</h2> <!--Accedemos a la variable titulo de c# mediante arroba titulo-->
+        </div>
+
+        @*Ahora se pondran cada una de las propiedades*@
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Nombres</label>
+                <input type="text" asp-for="Nombres" class="form-control" placeholder="Nombres" />
+                <span asp-validation-for="Nombres" class="text-danger"></span> <!--Si el campo nombres es requerido nos avisa-->
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Apellido Paterno</label>
+                <input type="text" asp-for="ApPaterno" class="form-control" placeholder="Apellido Paterno" />
+                <span asp-validation-for="ApPaterno" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Apellido Materno</label>
+                <input type="text" asp-for="ApMaterno" class="form-control" placeholder="Apellido Materno" />
+                <span asp-validation-for="ApMaterno" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Fecha de Nacimiento</label>
+                <input type="date" asp-for="FechaNacimiento" class="form-control datepicker" placeholder="Fecha de Nacimiento" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>NSS</label>
+                <input type="text" asp-for="NSS" class="form-control" placeholder="Número de Seguro Social" />
+                <span asp-validation-for="NSS" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>CURP</label>
+                <input type="text" asp-for="CURP" class="form-control" placeholder="CURP" />
+                <span asp-validation-for="CURP" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="email" asp-for="Email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>idPuesto</label>
+                <input type="text" asp-for="IdPuesto" class="form-control" placeholder="Id Puesto" />
+                <span asp-validation-for="IdPuesto" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Fecha de Ingreso</label>
+                <input type="date" asp-for="FechaIngreso" class="form-control datepicker" placeholder="Fecha de Ingreso" />
+                <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Tipo de Nómina</label>
+            <select asp-for="TipoNomina" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                <option value="quincenal">Quincenal</option>
+                <option value="semanal">Semanal</option>
+            </select>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>idPlanta</label>
+                <input type="text" asp-for="IdPlanta" class="form-control" placeholder="Id Planta" />
+                <span asp-validation-for="IdPlanta" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Turno</label>
+            <select asp-for="Turno" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                <option value="matutino">Matutino</option>
+                <option value="nocturno">Nocturno</option>
+            </select>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>numeroGafete</label>
+                <input type="text" asp-for="NumeroGafete" class="form-control" placeholder="Número de Gafete" />
+                <span asp-validation-for="NumeroGafete" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Status del Empleado</label>
+            <select asp-for="StatusEmpleado" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                <option value="true">Activo</option>
+                <option value="false">Inactivo</option>
+            </select>
+        </div>
+        <br />
+        @*Vamos ahora a llamar las vistas parciales*@
+        <div>
+            @if (Model.IdEmpleado != 0)
+            {
+                <partial name="_BotonesActualizarYRegresar" model="Model.IdEmpleado" />
+            }
+            else
+            {
+                <partial name="_BotonesCrearYRegresar" />
+            }
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0",
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" /> <!--Permitira mostrar los errores de los span a nivel del cliente-->
+   
+}
+
+
+
+

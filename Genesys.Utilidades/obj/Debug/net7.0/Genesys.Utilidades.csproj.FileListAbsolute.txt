@@ -1,0 +1,12 @@
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\bin\Debug\net7.0\Genesys.Utilidades.deps.json
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\bin\Debug\net7.0\Genesys.Utilidades.dll
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\bin\Debug\net7.0\Genesys.Utilidades.pdb
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\Genesys.Utilidades.csproj.AssemblyReference.cache
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\Genesys.Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\Genesys.Utilidades.AssemblyInfoInputs.cache
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\Genesys.Utilidades.AssemblyInfo.cs
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\Genesys.Utilidades.csproj.CoreCompileInputs.cache
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\Genesys.Utilidades.dll
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\refint\Genesys.Utilidades.dll
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\Genesys.Utilidades.pdb
+C:\Users\yoshy\source\repos\Genesys\Genesys.Utilidades\obj\Debug\net7.0\ref\Genesys.Utilidades.dll

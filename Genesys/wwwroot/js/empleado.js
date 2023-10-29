@@ -72,8 +72,44 @@ function loadDataTable() {
                             <a href="/Admin/Empleado/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer"> 
                                 <i class="bi bi-pencil-square"></i>
                             </a>
+                        </div>
+                    `;
+                },
+            },
+            {
+                "data": "idEmpleado", //la columna vacia tiene que ver con los botones, le pasamos el id de data mediante un render
+                "render": function (data) {//data  trae el id del modelo... para aparecer las comillas invertidas usamos alt96
+                    //esto es para renderizar codigo html
+                    return ` 
+                       <div class="text-center"> 
                             <a onclick=Delete("/Admin/Empleado/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
                                 <i class="bi bi-trash3-fill"></i>
+                            </a>
+                        </div>
+                    `;
+                },
+            },
+            {
+                "data": "idEmpleado", //la columna vacia tiene que ver con los botones, le pasamos el id de data mediante un render
+                "render": function (data) {//data  trae el id del modelo... para aparecer las comillas invertidas usamos alt96
+                    //esto es para renderizar codigo html
+                    return ` 
+                        <div class="text-center">
+                            <a href="/Admin/Documentos/Upsert/${data}" class="btn btn-primary text-white" style="cursor:pointer"> 
+                                <i class="bi bi-file-earmark-arrow-up"></i>
+                            </a>
+                        </div>
+                    `;
+                },
+            },
+            {
+                "data": "idEmpleado", //la columna vacia tiene que ver con los botones, le pasamos el id de data mediante un render
+                "render": function (data) {//data  trae el id del modelo... para aparecer las comillas invertidas usamos alt96
+                    //esto es para renderizar codigo html
+                    return ` 
+                        <div class="text-center">
+                            <a href="/Admin/DatosBancarios/Upsert/${data}" class="btn btn-dark text-white" style="cursor:pointer"> 
+                                <i class="bi bi-cash-coin"></i>
                             </a>
                         </div>
                     `;
@@ -82,6 +118,7 @@ function loadDataTable() {
         ]
     });
 }
+
 function Delete(url) {
     swal({
         title: "¿Está seguro de eliminar el empleado?",

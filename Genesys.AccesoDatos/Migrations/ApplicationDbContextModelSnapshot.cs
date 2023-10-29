@@ -22,6 +22,74 @@ namespace Genesys.AccesoDatos.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Genesys.Modelos.DatosBancarios", b =>
+                {
+                    b.Property<int>("IdDatosBancarios")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDatosBancarios"));
+
+                    b.Property<string>("ClabeInterbancaria")
+                        .IsRequired()
+                        .HasMaxLength(18)
+                        .HasColumnType("nvarchar(18)");
+
+                    b.Property<int>("IdEmpleado")
+                        .HasColumnType("int")
+                        .HasColumnName("IdEmpleado");
+
+                    b.Property<string>("NombreBanco")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("NumeroCuenta")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Prestamos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("StatusDatosBancarios")
+                        .HasColumnType("bit");
+
+                    b.HasKey("IdDatosBancarios");
+
+                    b.ToTable("DatosBancarios");
+                });
+
+            modelBuilder.Entity("Genesys.Modelos.Documentos", b =>
+                {
+                    b.Property<int>("IdDocumento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDocumento"));
+
+                    b.Property<byte[]>("Archivo")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<int>("IdEmpleado")
+                        .HasColumnType("int")
+                        .HasColumnName("IdEmpleado");
+
+                    b.Property<string>("NombreDocumento")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<bool>("StatusDocumento")
+                        .HasColumnType("bit");
+
+                    b.HasKey("IdDocumento");
+
+                    b.ToTable("Documentos");
+                });
+
             modelBuilder.Entity("Genesys.Modelos.Empleado", b =>
                 {
                     b.Property<int>("IdEmpleado")
@@ -56,10 +124,12 @@ namespace Genesys.AccesoDatos.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdPlanta")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("IdPlanta");
 
                     b.Property<int>("IdPuesto")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("IdPuesto");
 
                     b.Property<string>("NSS")
                         .IsRequired()
@@ -89,6 +159,56 @@ namespace Genesys.AccesoDatos.Migrations
                     b.HasKey("IdEmpleado");
 
                     b.ToTable("Empleados");
+                });
+
+            modelBuilder.Entity("Genesys.Modelos.Planta", b =>
+                {
+                    b.Property<int>("IdPlanta")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdPlanta"));
+
+                    b.Property<string>("NombrePlanta")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<bool>("StatusPlanta")
+                        .HasColumnType("bit");
+
+                    b.HasKey("IdPlanta");
+
+                    b.ToTable("Plantas");
+                });
+
+            modelBuilder.Entity("Genesys.Modelos.Puesto", b =>
+                {
+                    b.Property<int>("IdPuesto")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdPuesto"));
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("NombrePuesto")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<bool>("StatusPuesto")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("Sueldo")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("IdPuesto");
+
+                    b.ToTable("Puestos");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

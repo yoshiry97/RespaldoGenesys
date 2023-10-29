@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,13 +32,17 @@ namespace Genesys.Modelos
         [EmailAddress(ErrorMessage = "El campo Email no tiene un formato de correo electrónico válido.")]
         public string Email { get; set; }
         [Required(ErrorMessage = "Puesto es requerido")]
+        [Column("IdPuesto")]
         public int IdPuesto { get; set; }
+        //public Puesto Puesto { get; set; } //Propiedad de navegacion para la relacion con puesto
         [Required(ErrorMessage = "Fecha de ingreso es requerida")]
         public DateTime FechaIngreso { get; set; }
         [Required(ErrorMessage = "Tipo de nómina es requerida")]
         public string TipoNomina { get; set; }
         [Required(ErrorMessage = "Planta es requerida")]
+        [Column("IdPlanta")]
         public int IdPlanta { get; set; }
+        //public Planta Planta { get; set; } //Propiedad de navegacion para la relacion con planta
         [Required(ErrorMessage = "Turno es requerido")]
         public string Turno { get; set; }
         [Required(ErrorMessage = "Número de gafete es requerido")]

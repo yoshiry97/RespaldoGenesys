@@ -11,6 +11,8 @@
     <div class="col-lg-6">
         <a class="btn btn-outline-primary" asp-action="Upsert"> <i class="bi bi-plus-square-fill"></i>Crear nuevo Empleado</a>
     </div>
+    <div id="detalleContainer"></div>
+
 
     <br />
 
@@ -34,12 +36,16 @@
                         <th>Turno</th>
                         <th>Número de Gafete</th>
                         <th>Status del Empleado</th>
-                        <th></th>
+                        <th>Editar Empleado</th>
+                        <th>Eliminar Empleado</th>
+                        <th>Cargar Documentos</th>
+                        <th>Cargar Datos Bancarios</th>
                     </tr>
                 </thead>
             </table>
         </div>
     </div>
+</div>
 
     @section Scripts{
         <script src="~/js/empleado.js"></script>

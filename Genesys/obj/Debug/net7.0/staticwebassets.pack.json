@@ -13,8 +13,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\wwwroot\\js\\datosBancarios.js",
+      "PackagePath": "staticwebassets\\js\\datosBancarios.js"
+    },
+    {
+      "Id": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\wwwroot\\js\\documentos.js",
+      "PackagePath": "staticwebassets\\js\\documentos.js"
+    },
+    {
       "Id": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\wwwroot\\js\\empleado.js",
       "PackagePath": "staticwebassets\\js\\empleado.js"
+    },
+    {
+      "Id": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\wwwroot\\js\\planta.js",
+      "PackagePath": "staticwebassets\\js\\planta.js"
+    },
+    {
+      "Id": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\wwwroot\\js\\puesto.js",
+      "PackagePath": "staticwebassets\\js\\puesto.js"
     },
     {
       "Id": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\wwwroot\\js\\site.js",

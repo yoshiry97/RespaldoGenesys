@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\Genesys.csproj": {}
+    "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys\\Genesys.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj": {
+    "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj",
+        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj",
         "projectName": "Genesys.AccesoDatos",
-        "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj",
+        "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj",
         "packagesPath": "C:\\Users\\yoshy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.AccesoDatos\\obj\\",
+        "outputPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.AccesoDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yoshy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\Genesys.Modelos.csproj": {
-                "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\Genesys.Modelos.csproj"
+              "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj": {
+                "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj"
               },
-              "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
-                "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
+              "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\Genesys.Modelos.csproj": {
+    "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\Genesys.Modelos.csproj",
+        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj",
         "projectName": "Genesys.Modelos",
-        "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\Genesys.Modelos.csproj",
+        "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj",
         "packagesPath": "C:\\Users\\yoshy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\obj\\",
+        "outputPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yoshy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -108,8 +108,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
-                "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
+              "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
               }
             }
           }
@@ -143,14 +143,14 @@
         }
       }
     },
-    "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
+    "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
+        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
         "projectName": "Genesys.Utilidades",
-        "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
+        "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
         "packagesPath": "C:\\Users\\yoshy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\obj\\",
+        "outputPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yoshy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -198,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\Genesys.csproj": {
+    "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys\\Genesys.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\Genesys.csproj",
+        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys\\Genesys.csproj",
         "projectName": "Genesys",
-        "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\Genesys.csproj",
+        "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys\\Genesys.csproj",
         "packagesPath": "C:\\Users\\yoshy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\obj\\",
+        "outputPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yoshy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -222,14 +222,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj": {
-                "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj"
+              "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj": {
+                "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj"
               },
-              "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\Genesys.Modelos.csproj": {
-                "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Modelos\\Genesys.Modelos.csproj"
+              "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj": {
+                "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj"
               },
-              "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
-                "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
+              "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
               }
             }
           }

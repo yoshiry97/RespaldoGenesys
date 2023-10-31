@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {}
+    "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
+    "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
+        "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
         "projectName": "Genesys.Utilidades",
-        "projectPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
+        "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
         "packagesPath": "C:\\Users\\yoshy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.Utilidades\\obj\\",
+        "outputPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yoshy\\AppData\\Roaming\\NuGet\\NuGet.Config",

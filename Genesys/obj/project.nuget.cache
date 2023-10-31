@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R1flz2/NHZc83TrJExdd3YaE7qJm77sTY2rXrCuan74Mz+8GuTrLZEfTKK6KBcsRK7Ao8LxKBjhI+/9Pb5WtFg==",
+  "dgSpecHash": "nF20OUMsRIgrlqMTjW7Q2Nzx8Axuwn4o8gDgLKTQDs28jsWNHgUzSdMlnwcKsnBaeJEvdxJiYQnpnY51eOsYbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys\\Genesys.csproj",
+  "projectFilePath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys\\Genesys.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yoshy\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\yoshy\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

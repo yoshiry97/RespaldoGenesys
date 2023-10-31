@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rb703Nv9bHaT2IVhQ0h9TByfEfkdXCotgcy99agQ1+c8Pd2RftnBwFEFvpgf2xZx87UxTHq5MJv+ASM62yzzuw==",
+  "dgSpecHash": "ryoOBugNdJPv/HV6DL+8sQIvsHZKacF3//7CuuQJx+FbZmRSL3k0+N7MLVaIhP2RKa9LJZg9qdLGJ5WZ3JW4cg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yoshy\\source\\repos\\Genesys\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj",
+  "projectFilePath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.AccesoDatos\\Genesys.AccesoDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yoshy\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\yoshy\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

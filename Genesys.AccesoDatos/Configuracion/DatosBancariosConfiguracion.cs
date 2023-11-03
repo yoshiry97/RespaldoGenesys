@@ -20,6 +20,10 @@ namespace Genesys.AccesoDatos.Configuracion
             builder.Property(x => x.Prestamos);
             builder.Property(x => x.IdEmpleado).IsRequired();
             builder.Property(x => x.StatusDatosBancarios).IsRequired();
+
+            builder.HasOne(x => x.Empleado).WithMany()
+                    .HasForeignKey(x => x.IdEmpleado)
+                    .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

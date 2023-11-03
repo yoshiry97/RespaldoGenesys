@@ -1,5 +1,6 @@
 ﻿using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Genesys.Modelos;
+using Genesys.Modelos.ViewModels;
 using Genesys.Utilidades;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,21 +20,29 @@ namespace Genesys.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Upsert(int? id) //id lleva signo de pregunta porque puede ir vacio
         {
-            DatosBancarios datosBancarios = new DatosBancarios();
+            DatosBancariosVM datosBancariosVM = new DatosBancariosVM()
+            {
+                datosBancarios = new DatosBancarios(),
+                EmpleadoLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Empleado"),
+            };
             if (id == null)
             {
                 //Crear una nuevo empleado
-                datosBancarios.StatusDatosBancarios = true;
-                return View(datosBancarios);
+                datosBancariosVM.datosBancarios.StatusDatosBancarios = true;
+                return View(datosBancariosVM);
             }
-            //Actualizamos empleado
-            datosBancarios = await _unidadTrabajo.DatosBancarios.Obtener(id.GetValueOrDefault());
-            if (datosBancarios == null)
+            else
             {
-                return NotFound();
+                datosBancariosVM.datosBancarios = await _unidadTrabajo.DatosBancarios.Obtener(id.GetValueOrDefault());
+                if (datosBancariosVM.datosBancarios == null)
+                {
+                    return NotFound();
+                }
+                return View(datosBancariosVM);
             }
-            return View(datosBancarios);
         }
+     
+
         //Vamos a crear el Upsert Post Action
         [HttpPost]
         [ValidateAntiForgeryToken] //Sirve para evitar las falsificaciones de solicitudes de un sitio cargado normalmente de otra pagina

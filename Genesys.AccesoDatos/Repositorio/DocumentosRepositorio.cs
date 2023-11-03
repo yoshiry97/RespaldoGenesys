@@ -1,6 +1,7 @@
 ﻿using Genesys.AccesoDatos.Data;
 using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Genesys.Modelos;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,16 +17,34 @@ namespace Genesys.AccesoDatos.Repositorio
         {
             _db = db;
         }
-        public void Actualizar (Documentos documentos)
+        public void Actualizar(Documentos documentos)
         {
             var documentosBD = _db.Documentos.FirstOrDefault(b => b.IdDocumento == documentos.IdDocumento);
             if (documentosBD != null)
             {
                 documentosBD.NombreDocumento = documentos.NombreDocumento;
-                documentosBD.Archivo = documentos.Archivo;
+                documentosBD.ArchivoUrl = documentos.ArchivoUrl;
                 documentosBD.IdEmpleado = documentos.IdEmpleado;
                 documentosBD.StatusDocumento = documentos.StatusDocumento;
                 _db.SaveChanges(); //Guarda los cambios en la base de datos
+            }
+        }
+
+        public IEnumerable<SelectListItem> ObtenerTodosDropdownLista(string obj)
+        {
+            if (obj == "Empleado")
+            {
+                return _db.Empleados
+                    .Where(c => c.StatusEmpleado == true)
+                    .Select(c => new SelectListItem
+                    {
+                        Text = $"{c.Nombres} {c.ApPaterno} {c.ApMaterno}",
+                        Value = c.IdEmpleado.ToString(),
+                    });
+            }
+            else
+            {
+                return null;
             }
         }
     }

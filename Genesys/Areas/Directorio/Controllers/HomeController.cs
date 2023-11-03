@@ -1,4 +1,5 @@
-﻿using Genesys.Modelos.ViewModels;
+﻿using Genesys.Modelos.ErrorViewModels;
+using Genesys.Modelos.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

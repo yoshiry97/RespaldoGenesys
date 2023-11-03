@@ -1,6 +1,7 @@
 ﻿using Genesys.AccesoDatos.Data;
 using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Genesys.Modelos;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,27 @@ namespace Genesys.AccesoDatos.Repositorio
                 empleadoBD.StatusEmpleado = empleado.StatusEmpleado;
                 _db.SaveChanges(); //Guarda los cambios en la base de datos
             }
+        }
+
+        public IEnumerable<SelectListItem> ObtenerTodosDropdownLista(string obj)
+        {
+            if (obj == "Planta")
+            {
+                return _db.Plantas.Where(c => c.StatusPlanta == true).Select(c => new SelectListItem
+                {
+                    Text = c.NombrePlanta,
+                    Value = c.IdPlanta.ToString(),
+                });
+            }
+            if (obj == "Puesto")
+            {
+                return _db.Puestos.Where(c => c.StatusPuesto == true).Select(c => new SelectListItem
+                {
+                    Text = c.NombrePuesto,
+                    Value = c.IdPuesto.ToString(),
+                });
+            }
+            return null;
         }
     }
 }

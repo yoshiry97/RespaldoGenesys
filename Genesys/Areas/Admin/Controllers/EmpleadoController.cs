@@ -1,5 +1,6 @@
 ﻿using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Genesys.Modelos;
+using Genesys.Modelos.ViewModels;
 using Genesys.Utilidades;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,22 +18,28 @@ namespace Genesys.Areas.Admin.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Upsert(int? id) //id lleva signo de pregunta porque puede ir vacio
+        public async Task<IActionResult> Upsert(int? id)
         {
-            Empleado empleado = new Empleado();
+            EmpleadoVM empleadoVM = new EmpleadoVM()
+            {
+                Empleado = new Empleado(),
+                PlantaLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Planta"),
+                PuestoLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Puesto")
+            };
             if (id == null)
             {
-                //Crear una nuevo empleado
-                empleado.StatusEmpleado = true;
-                return View(empleado);
+                //Crear un nuevo producto
+                return View(empleadoVM);
             }
-            //Actualizamos empleado
-            empleado = await _unidadTrabajo.Empleado.Obtener(id.GetValueOrDefault());
-            if (empleado == null)
+            else
             {
-                return NotFound();
+                empleadoVM.Empleado = await _unidadTrabajo.Empleado.Obtener(id.GetValueOrDefault());
+                if (empleadoVM.Empleado == null)
+                {
+                    return NotFound();
+                }
+                return View(empleadoVM);
             }
-            return View(empleado);
         }
         //Vamos a crear el Upsert Post Action
         [HttpPost]
@@ -62,7 +69,7 @@ namespace Genesys.Areas.Admin.Controllers
         //El codigo de la region sirve mas que nada para poner comentarios
         public async Task<IActionResult> ObtenerTodos()
         {
-            var todos = await _unidadTrabajo.Empleado.ObtenerTodos(); //El metodo obtener todos trae una lista
+            var todos = await _unidadTrabajo.Empleado.ObtenerTodos(incluirPropiedades:"Puesto,Planta"); //El metodo obtener todos trae una lista
             return Json(new { data = todos }); //todos tiene la lista de empleados, data lo referenciaremos desde el javascript
         }
         [HttpPost]

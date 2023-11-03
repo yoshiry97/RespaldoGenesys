@@ -1,4 +1,5 @@
 ﻿using Genesys.Modelos;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Genesys.AccesoDatos.Repositorio.IRepositorio
     public interface IDocumentosRepositorio : IRepositorio<Documentos>
     {
         void Actualizar(Documentos documentos);
+        IEnumerable<SelectListItem> ObtenerTodosDropdownLista(string obj);
     }
 }

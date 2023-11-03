@@ -26,20 +26,12 @@ function loadDataTable() {
             "url": "/Admin/Documentos/ObtenerTodos"
         },
         "columns": [ // en la seccion columnas se renderizan las columnas o propiedades de la tabla
-            { "data": "idDocumento" },
             { "data": "nombreDocumento" },
-            { "data": "idEmpleado" },
+            { "data": "empleado.nombre" },
             {
                 "data": "statusDocumento",
                 "render": function (data) {
                     return data ? "Activo" : "Inactivo";
-                }
-            },
-            {
-                "data": null,
-                "render": function (data, type, full, meta) {
-                    // Creamos un enlace para descargar el archivo usando el nombre del documento
-                    return '<a href="/Admin/Documentos/DescargarArchivo?id=' + data.IdDocumento + '">' + data.NombreDocumento + '</a>';
                 }
             },
             {

@@ -16,10 +16,12 @@ namespace Genesys.Modelos
         [MaxLength(40, ErrorMessage = "Nombre debe ser Máximo 40 caracteres")]
         public string NombreDocumento { get; set; }
         [Required(ErrorMessage = "Archivo es requerido")]
-        public byte[] Archivo { get; set; }
+        public string ArchivoUrl { get; set; }
         [Column("IdEmpleado")]
+        [Required(ErrorMessage = "Empleado es requerido")]
         public int IdEmpleado { get; set; }
-        //public Empleado Empleado { get; set; } //Propiedad de navegacion para la clave foranea 
+        [ForeignKey("IdEmpleado")]
+        public Empleado Empleado { get; set; } //Propiedad de navegacion para la clave foranea 
         public bool StatusDocumento { get; set; }
 
     }

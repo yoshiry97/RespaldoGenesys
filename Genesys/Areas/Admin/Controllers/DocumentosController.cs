@@ -1,9 +1,11 @@
 ﻿using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Genesys.Modelos;
+using Genesys.Modelos.ViewModels;
 using Genesys.Utilidades;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq.Expressions;
 using System.Text;
 
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -24,81 +26,100 @@ namespace Genesys.Areas.Admin.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Upsert(int? id) //id lleva signo de pregunta porque puede ir vacio
+
+        public async Task<IActionResult> Upsert(int? id)
         {
-            Documentos documentos = new Documentos();
+            DocumentosVM documentosVM = new DocumentosVM()
+            {
+                Documentos = new Documentos(),
+                EmpleadoLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Empleado"),
+            };
+
             if (id == null)
             {
-                //Crear una nuevo empleado
-                documentos.StatusDocumento = true;
-                return View(documentos);
+                // Crear nuevo Documento
+                documentosVM.Documentos.StatusDocumento = true;
+                return View(documentosVM);
             }
-            //Actualizamos empleado
-            documentos = await _unidadTrabajo.Documentos.Obtener(id.GetValueOrDefault());
-            if (documentos == null)
+            else
             {
-                return NotFound();
+                documentosVM.Documentos = await _unidadTrabajo.Documentos.Obtener(id.GetValueOrDefault());
+                if (documentosVM.Documentos == null)
+                {
+                    return NotFound();
+                }
+                return View(documentosVM);
             }
-            return View(documentos);
         }
-        //Vamos a crear el Upsert Post Action
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Upsert([FromForm] Documentos documentos, IFormFile archivo)
+        public async Task<IActionResult> Upsert(DocumentosVM documentosVM)
         {
             if (ModelState.IsValid)
             {
-                if (archivo != null && archivo.Length > 0)
+                var files = HttpContext.Request.Form.Files;
+                string webRootPath = _webHostEnvironment.WebRootPath;
+
+                if (documentosVM.Documentos.IdDocumento == 0)
                 {
-                    // Guardar el archivo en una carpeta en el sistema de archivos
-                    var uploads = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploads))
+                    // Crear
+                    string upload = webRootPath + DS.ImagenDocumentosRuta;
+                    string fileName = Guid.NewGuid().ToString();
+                    string extension = Path.GetExtension(files[0].FileName);
+
+                    using (var fileStream = new FileStream(Path.Combine(upload, fileName + extension), FileMode.Create))
                     {
-                        Directory.CreateDirectory(uploads);
+                        files[0].CopyTo(fileStream);
                     }
-
-                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + archivo.FileName;
-                    var filePath = Path.Combine(uploads, uniqueFileName);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    documentosVM.Documentos.ArchivoUrl = fileName + extension;
+                    await _unidadTrabajo.Documentos.Agregar(documentosVM.Documentos);
+                }
+                else
+                {
+                    // Actualizar
+                    var objProducto = await _unidadTrabajo.Documentos.ObtenerPrimero(p => p.IdDocumento == documentosVM.Documentos.IdDocumento, isTracking: false);
+                    if (files.Count > 0)  // Si se carga una nueva Imagen para el producto existente
                     {
-                        await archivo.CopyToAsync(stream);
-                    }
+                        string upload = webRootPath + DS.ImagenDocumentosRuta;
+                        string fileNAme = Guid.NewGuid().ToString();
+                        string extension = Path.GetExtension(files[0].FileName);
 
-                    // Asigna los datos binarios del archivo a la propiedad "Archivo"
-                    using (var memoryStream = new MemoryStream())
-                    {
-                        await archivo.CopyToAsync(memoryStream);
-                        documentos.Archivo = memoryStream.ToArray();
-                    }
-
-                    documentos.NombreDocumento = uniqueFileName; // Guarda el nombre del archivo
-
-                    if (documentos.IdDocumento == 0)
-                    {
-                        await _unidadTrabajo.Documentos.Agregar(documentos);
-                        TempData[DS.Exitosa] = "Documento Creado Exitosamente";
-                    }
+                        //Borrar la imagen anterior
+                        var anteriorFile = Path.Combine(upload, objProducto.ArchivoUrl);
+                        if (System.IO.File.Exists(anteriorFile))
+                        {
+                            System.IO.File.Delete(anteriorFile);
+                        }
+                        using (var fileStream = new FileStream(Path.Combine(upload, fileNAme + extension), FileMode.Create))
+                        {
+                            files[0].CopyTo(fileStream);
+                        }
+                        documentosVM.Documentos.ArchivoUrl = fileNAme + extension;
+                    } // Caso contrario no se carga una nueva imagen
                     else
                     {
-                        _unidadTrabajo.Documentos.Actualizar(documentos);
-                        TempData[DS.Exitosa] = "Documento Actualizado Exitosamente";
+                        documentosVM.Documentos.ArchivoUrl = objProducto.ArchivoUrl;
                     }
-
-                    await _unidadTrabajo.Guardar();
-                    return RedirectToAction(nameof(Index));
+                    _unidadTrabajo.Documentos.Actualizar(documentosVM.Documentos);
                 }
-                TempData[DS.Error] = "Error al Grabar Documento";
-            }
+                TempData[DS.Exitosa] = "Transaccion Exitosa!";
+                await _unidadTrabajo.Guardar();
+                //return View("Index");
+                return RedirectToAction("Index");
 
-            return View(documentos);
+            }  // If not Valid
+            documentosVM.EmpleadoLista = _unidadTrabajo.Documentos.ObtenerTodosDropdownLista("Empleado");
+          
+            return View(documentosVM);
         }
+
+
         #region API
         [HttpGet]
-        //El codigo de la region sirve mas que nada para poner comentarios
         public async Task<IActionResult> ObtenerTodos()
         {
-            var todos = await _unidadTrabajo.Documentos.ObtenerTodos(); //El metodo obtener todos trae una lista
+            var todos = await _unidadTrabajo.Documentos.ObtenerTodos(incluirPropiedades:"Empleado"); //El metodo obtener todos trae una lista
             return Json(new { data = todos }); //todos tiene la lista de empleados, data lo referenciaremos desde el javascript
         }
         [HttpPost]
@@ -109,10 +130,22 @@ namespace Genesys.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Error al borrar documentos" });
             }
+            //Remover imagen
+            string upload = _webHostEnvironment.WebRootPath + DS.ImagenDocumentosRuta;
+            var anteriorFile = Path.Combine(upload, documentosBD.ArchivoUrl);
+            if (System.IO.File.Exists(anteriorFile))
+            {
+                System.IO.File.Delete(anteriorFile);
+            }
+
             _unidadTrabajo.Documentos.Remover(documentosBD);
             await _unidadTrabajo.Guardar();
             return Json(new { success = true, message = "Documento eliminado exitosamente" });
         }
+       
+        
+        
+        
         [ActionName("ValidarNombre")]
         public async Task<IActionResult> ValidarNombre(string nombre, int id = 0)
         {
@@ -131,23 +164,6 @@ namespace Genesys.Areas.Admin.Controllers
                 return Json(new { data = true });
             }
             return Json(new { data = false });
-        }
-        [ActionName("DescargarArchivo")]
-        public async Task<IActionResult> DescargarArchivo(int id)
-        {
-            var documento = await _unidadTrabajo.Documentos.Obtener(id); // Asegúrate de usar await aquí
-            if (documento == null)
-            {
-                // Manejar el caso en el que el documento no se encuentre
-                return NotFound();
-            }
-
-            // Accede a las propiedades del documento
-            byte[] archivoData = documento.Archivo;
-            string nombreArchivo = documento.NombreDocumento;
-
-            // Devuelve el archivo como una descarga
-            return File(archivoData, "application/octet-stream", nombreArchivo);
         }
 
         #endregion

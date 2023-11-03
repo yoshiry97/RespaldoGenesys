@@ -30,6 +30,14 @@ namespace Genesys.AccesoDatos.Configuracion
             builder.Property(x => x.NumeroGafete).IsRequired();
             builder.Property(x => x.StatusEmpleado).IsRequired();
 
+            /*Relaciones*/
+            builder.HasOne(x => x.Puesto).WithMany()
+                    .HasForeignKey(x => x.IdPuesto)
+                    .OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Planta).WithMany()
+                    .HasForeignKey(x => x.IdPlanta)
+                    .OnDelete(DeleteBehavior.NoAction);
+
         }
     }
 }

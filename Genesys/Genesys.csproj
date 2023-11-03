@@ -37,4 +37,8 @@
     <ProjectReference Include="..\Genesys.Utilidades\Genesys.Utilidades.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\imagenes\documentos\" />
+  </ItemGroup>
+
 </Project>

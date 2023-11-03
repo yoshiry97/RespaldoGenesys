@@ -58,6 +58,8 @@ namespace Genesys.AccesoDatos.Migrations
 
                     b.HasKey("IdDatosBancarios");
 
+                    b.HasIndex("IdEmpleado");
+
                     b.ToTable("DatosBancarios");
                 });
 
@@ -69,9 +71,8 @@ namespace Genesys.AccesoDatos.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDocumento"));
 
-                    b.Property<byte[]>("Archivo")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("ArchivoUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdEmpleado")
                         .HasColumnType("int")
@@ -86,6 +87,8 @@ namespace Genesys.AccesoDatos.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("IdDocumento");
+
+                    b.HasIndex("IdEmpleado");
 
                     b.ToTable("Documentos");
                 });
@@ -157,6 +160,10 @@ namespace Genesys.AccesoDatos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdEmpleado");
+
+                    b.HasIndex("IdPlanta");
+
+                    b.HasIndex("IdPuesto");
 
                     b.ToTable("Empleados");
                 });
@@ -411,6 +418,47 @@ namespace Genesys.AccesoDatos.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Genesys.Modelos.DatosBancarios", b =>
+                {
+                    b.HasOne("Genesys.Modelos.Empleado", "Empleado")
+                        .WithMany()
+                        .HasForeignKey("IdEmpleado")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Empleado");
+                });
+
+            modelBuilder.Entity("Genesys.Modelos.Documentos", b =>
+                {
+                    b.HasOne("Genesys.Modelos.Empleado", "Empleado")
+                        .WithMany()
+                        .HasForeignKey("IdEmpleado")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Empleado");
+                });
+
+            modelBuilder.Entity("Genesys.Modelos.Empleado", b =>
+                {
+                    b.HasOne("Genesys.Modelos.Planta", "Planta")
+                        .WithMany()
+                        .HasForeignKey("IdPlanta")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Genesys.Modelos.Puesto", "Puesto")
+                        .WithMany()
+                        .HasForeignKey("IdPuesto")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Planta");
+
+                    b.Navigation("Puesto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

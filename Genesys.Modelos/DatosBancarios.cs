@@ -24,6 +24,8 @@ namespace Genesys.Modelos
         public string Prestamos { get; set; }
         [Column("IdEmpleado")]
         public int IdEmpleado { get; set; }
+        [ForeignKey("IdEmpleado")]
+        public Empleado Empleado { get; set; } //Propiedad de navegacion para la clave foranea 
         public bool StatusDatosBancarios { get; set; }
     }
 }

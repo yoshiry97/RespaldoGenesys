@@ -15,8 +15,12 @@ namespace Genesys.AccesoDatos.Configuracion
         {
             builder.Property(x => x.IdDocumento).IsRequired();
             builder.Property(x => x.NombreDocumento).IsRequired().HasMaxLength(40);
-            builder.Property(x => x.Archivo).IsRequired();
+            builder.Property(x => x.ArchivoUrl).IsRequired(false);
             builder.Property(x => x.IdEmpleado).IsRequired();
+
+            builder.HasOne(x=>x.Empleado).WithMany()
+                    .HasForeignKey(x=>x.IdEmpleado)
+                    .OnDelete(DeleteBehavior.NoAction);
       }
     }
 }

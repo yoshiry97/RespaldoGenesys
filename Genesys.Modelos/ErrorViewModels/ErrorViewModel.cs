@@ -1,4 +1,4 @@
-namespace Genesys.Modelos.ViewModels
+namespace Genesys.Modelos.ErrorViewModels
 {
     public class ErrorViewModel
     {

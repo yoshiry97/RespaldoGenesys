@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wN+4WeXqdwiFBX+nCYey+oT1NYrksyPzrYZLlQqbMYo=",
+  "Hash": "h1XzpB/GIzmbr0+/ZUz9Erveicx1nmbhhw+BG/qZx64=",
   "Source": "Genesys",
   "BasePath": "_content/Genesys",
   "Mode": "Default",
@@ -1154,6 +1154,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\7e1cbb90-377e-442c-814a-c82ce2adb485.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG",
+      "SourceId": "Genesys",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\",
+      "BasePath": "_content/Genesys",
+      "RelativePath": "imagenes/documentos/a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\logoGenesys.png",
+      "SourceId": "Genesys",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\",
+      "BasePath": "_content/Genesys",
+      "RelativePath": "imagenes/logoGenesys.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\logoGenesys.png"
     },
     {
       "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\js\\datosBancarios.js",

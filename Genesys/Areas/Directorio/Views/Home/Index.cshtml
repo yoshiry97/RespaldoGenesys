@@ -2,7 +2,61 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 text-purple">Bienvenido</h1>
+        <p>Seleccione una categoría:</p>
+    </div>
+
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-purple">Empleados</h5>
+                    <p class="card-text" style="font-size: 18px;">Administre información de empleados.</p>
+                    <a href="/Admin/Empleado" class="btn btn-purple btn-lg">Ir a Empleados</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-purple">Plantas</h5>
+                    <p class="card-text">Administre información de plantas.</p>
+                    <a href="/Admin/Planta" class="btn btn-purple btn-lg">Ir a Plantas</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-purple">Puestos</h5>
+                    <p class="card-text" style="font-size: 18px;">Administre información de puestos.</p>
+                    <a href="/Admin/Puesto" class="btn btn-purple btn-lg">Ir a Puestos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-purple">Datos Bancarios</h5>
+                    <p class="card-text" style="font-size: 18px;">Administre información de datos bancarios.</p>
+                    <a href="/Admin/DatosBancarios" class="btn btn-purple btn-lg">Ir a Datos Bancarios</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-purple">Documentos</h5>
+                    <p class="card-text" style="font-size: 18px;">Administre información de documentos.</p>
+                    <a href="/Admin/Documentos" class="btn btn-purple btn-lg">Ir a Documentos</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

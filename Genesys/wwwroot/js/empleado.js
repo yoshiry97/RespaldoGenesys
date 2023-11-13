@@ -40,7 +40,11 @@ function loadDataTable() {
             { "data": "nss" },
             { "data": "curp" },
             { "data": "email" },
-            { "data": "idPuesto" },
+            {
+                "render": function (data, type, row, meta) {
+                    return row.puesto.nombrePuesto;
+                }
+            },
             {
                 "data": "fechaIngreso",
                 "render": function (data) {
@@ -49,7 +53,11 @@ function loadDataTable() {
                 }
             },
             { "data": "tipoNomina" },
-            { "data": "idPlanta" },
+            {
+                "render": function (data, type, row, meta) {
+                    return row.planta.nombrePlanta;
+                }
+            },
             { "data": "turno" },
             { "data": "numeroGafete" },
             {

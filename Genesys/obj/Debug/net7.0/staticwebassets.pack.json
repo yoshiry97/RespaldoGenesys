@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\imagenes\\documentos\\7e1cbb90-377e-442c-814a-c82ce2adb485.JPG"
     },
     {
+      "Id": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG",
+      "PackagePath": "staticwebassets\\imagenes\\documentos\\a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG"
+    },
+    {
+      "Id": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\logoGenesys.png",
+      "PackagePath": "staticwebassets\\imagenes\\logoGenesys.png"
+    },
+    {
       "Id": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\js\\datosBancarios.js",
       "PackagePath": "staticwebassets\\js\\datosBancarios.js"
     },

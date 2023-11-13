@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "irG/qgCaUHOVxowo39eVxkmgsAZy4TmvcAK40QMKjc+i0D5NzOVv26YXCy799JMphOARQluPYrMSgPeJH1j7ZQ==",
+  "dgSpecHash": "e8TPA0qzXVKGWFQTlsS+p/2da6fGztyDKywS/SE7XYx4PrnJmpdH6RAa0Dw97lSJDDQPaZuYVUrkiztlRLLG1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj",
+  "projectFilePath": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Modelos\\Genesys.Modelos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yoshy\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\yoshy\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

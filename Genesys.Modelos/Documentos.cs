@@ -15,7 +15,7 @@ namespace Genesys.Modelos
         [Required(ErrorMessage = "Nombre de Documento es requerido")]
         [MaxLength(40, ErrorMessage = "Nombre debe ser Máximo 40 caracteres")]
         public string NombreDocumento { get; set; }
-        [Required(ErrorMessage = "Archivo es requerido")]
+        //[Required(ErrorMessage = "Archivo es requerido")]
         public string ArchivoUrl { get; set; }
         [Column("IdEmpleado")]
         [Required(ErrorMessage = "Empleado es requerido")]

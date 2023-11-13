@@ -1,28 +1,32 @@
-﻿
-@model Genesys.Modelos.ViewModels.EmpleadoVM
+﻿@model Genesys.Modelos.ViewModels.EmpleadoVM
+@using Genesys.Utilidades
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     var titulo = "Crear Empleado"; //Creamos una variable titulo que va a cambiar de acuerdo a lo que estemos haciendo
 }
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>*@
 
 @*Vamos a crear el formulario donde van a estar todos nuestros inputs, ya que vamos a mandar informacion, le vamos a poner el metodo post*@
 <form method="post">
+    
+    @if (@Model.Empleado.IdEmpleado != 0)
+    {
+        //Actualizar
+        titulo = "Editar Empleado";
+        <input asp-for="Empleado.IdEmpleado" hidden />
+        //no quiero que el id se vea pero hay que mandarlo, asp-for deja entrar a las propiedades del modelo, en este caso id
+    }
+
     <div style="padding-left:15%; padding-right:15%; padding-bottom:inherit.4rem;">
         <div class="row border-0">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div> @*le decimos que todas las validaciones que tenga el modelo se muestren en este div*@
         </div>
         @*usamos c# para preguntar si el ide es =! de cero que cambie el titulo, como es c# se inicia con arroba*@
-        @if (Model.Empleado.IdEmpleado != 0)
-        {
-            //Actualizar
-            titulo = "Actualizar Empleado";
-            <input type="hidden" asp-for="Empleado.IdEmpleado" hidden />
-            //no quiero que el id se vea pero hay que mandarlo, asp-for deja entrar a las propiedades del modelo, en este caso id
-        }
+       
         <div class="col-12 border-bottom p-0">
             <h2 class="text-primary">@titulo</h2> <!--Accedemos a la variable titulo de c# mediante arroba titulo-->
         </div>
@@ -81,7 +85,7 @@
             <div class="form-group col-md-6">
                 <label>Puesto</label>
                 <select asp-for="Empleado.IdPuesto" asp-items="@Model.PuestoLista" class="form-select">
-                    <option disbled-selected>--Seleccione un Puesto</option>"
+                    <option disabled selected>--Seleccione un Puesto</option>
                 </select>
                 <span asp-validation-for="Empleado.IdPuesto" class="text-danger"></span>
             </div>
@@ -104,7 +108,7 @@
             <div class="form-group col-md-6">
                 <label>Planta</label>
                 <select asp-for="Empleado.IdPlanta" asp-items="@Model.PlantaLista" class="form-select">
-                    <option disbled-selected>--Seleccione una Planta</option>"
+                    <option disabled selected>--Seleccione una Planta</option>
                 </select>
                 <span asp-validation-for="Empleado.IdPlanta" class="text-danger"></span>
             </div>
@@ -118,7 +122,7 @@
         </div>
         <div class="row mb-2 mt-2">
             <div class="form-group col-md-6">
-                <label>numeroGafete</label>
+                <label>Número de Gafete</label>
                 <input type="text" asp-for="Empleado.NumeroGafete" class="form-control" placeholder="Número de Gafete" />
                 <span asp-validation-for="Empleado.NumeroGafete" class="text-danger"></span>
             </div>
@@ -133,7 +137,7 @@
         <br />
 
 
-        
+
         @*Vamos ahora a llamar las vistas parciales*@
         <div>
             @if (Model.Empleado.IdEmpleado != 0)
@@ -148,7 +152,7 @@
     </div>
 </form>
 
-<script>
+@*<script>
     $(document).ready(function () {
         $(".datepicker").datepicker({
             changeMonth: true,
@@ -157,13 +161,8 @@
             dateFormat: "yy-mm-dd"
         });
     });
-</script>
+</script>*@
 
 @section Scripts{
     <partial name="_ValidationScriptsPartial" /> <!--Permitira mostrar los errores de los span a nivel del cliente-->
-   
 }
-
-
-
-

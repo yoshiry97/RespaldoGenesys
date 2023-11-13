@@ -32,7 +32,7 @@ namespace Genesys.Areas.Admin.Controllers
             DocumentosVM documentosVM = new DocumentosVM()
             {
                 Documentos = new Documentos(),
-                EmpleadoLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Empleado"),
+                EmpleadoLista = _unidadTrabajo.Documentos.ObtenerTodosDropdownLista("Empleado")
             };
 
             if (id == null)
@@ -58,6 +58,7 @@ namespace Genesys.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                //return Content("Url correcta!");
                 var files = HttpContext.Request.Form.Files;
                 string webRootPath = _webHostEnvironment.WebRootPath;
 
@@ -73,33 +74,36 @@ namespace Genesys.Areas.Admin.Controllers
                         files[0].CopyTo(fileStream);
                     }
                     documentosVM.Documentos.ArchivoUrl = fileName + extension;
+                    
                     await _unidadTrabajo.Documentos.Agregar(documentosVM.Documentos);
                 }
                 else
                 {
                     // Actualizar
-                    var objProducto = await _unidadTrabajo.Documentos.ObtenerPrimero(p => p.IdDocumento == documentosVM.Documentos.IdDocumento, isTracking: false);
+                    var objDocumento = await _unidadTrabajo.Documentos.ObtenerPrimero(p => p.IdDocumento == documentosVM.Documentos.IdDocumento, isTracking: false);
                     if (files.Count > 0)  // Si se carga una nueva Imagen para el producto existente
                     {
                         string upload = webRootPath + DS.ImagenDocumentosRuta;
-                        string fileNAme = Guid.NewGuid().ToString();
+                        string fileName = Guid.NewGuid().ToString();
                         string extension = Path.GetExtension(files[0].FileName);
 
                         //Borrar la imagen anterior
-                        var anteriorFile = Path.Combine(upload, objProducto.ArchivoUrl);
+                        var anteriorFile = Path.Combine(upload, objDocumento.ArchivoUrl);
                         if (System.IO.File.Exists(anteriorFile))
                         {
                             System.IO.File.Delete(anteriorFile);
                         }
-                        using (var fileStream = new FileStream(Path.Combine(upload, fileNAme + extension), FileMode.Create))
+                        using (var fileStream = new FileStream(Path.Combine(upload, fileName + extension), FileMode.Create))
                         {
                             files[0].CopyTo(fileStream);
                         }
-                        documentosVM.Documentos.ArchivoUrl = fileNAme + extension;
+                        documentosVM.Documentos.ArchivoUrl = fileName + extension;
+                      
                     } // Caso contrario no se carga una nueva imagen
                     else
                     {
-                        documentosVM.Documentos.ArchivoUrl = objProducto.ArchivoUrl;
+                        documentosVM.Documentos.ArchivoUrl = objDocumento.ArchivoUrl;
+                       
                     }
                     _unidadTrabajo.Documentos.Actualizar(documentosVM.Documentos);
                 }
@@ -107,8 +111,7 @@ namespace Genesys.Areas.Admin.Controllers
                 await _unidadTrabajo.Guardar();
                 //return View("Index");
                 return RedirectToAction("Index");
-
-            }  // If not Valid
+            }
             documentosVM.EmpleadoLista = _unidadTrabajo.Documentos.ObtenerTodosDropdownLista("Empleado");
           
             return View(documentosVM);

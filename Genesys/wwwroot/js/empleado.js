@@ -95,7 +95,7 @@ function loadDataTable() {
                     //esto es para renderizar codigo html
                     return ` 
                         <div class="text-center">
-                            <a href="/Admin/Documentos/Upsert/${data}" class="btn btn-primary text-white" style="cursor:pointer"> 
+                            <a href="/Admin/Documentos/Upsert" class="btn btn-primary text-white" style="cursor:pointer"> 
                                 <i class="bi bi-file-earmark-arrow-up"></i>
                             </a>
                         </div>

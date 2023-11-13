@@ -23,7 +23,7 @@ namespace Genesys.Areas.Admin.Controllers
             DatosBancariosVM datosBancariosVM = new DatosBancariosVM()
             {
                 datosBancarios = new DatosBancarios(),
-                EmpleadoLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Empleado"),
+                EmpleadoLista = _unidadTrabajo.DatosBancarios.ObtenerTodosDropdownLista("Empleado"),
             };
             if (id == null)
             {
@@ -41,37 +41,56 @@ namespace Genesys.Areas.Admin.Controllers
                 return View(datosBancariosVM);
             }
         }
-     
+
 
         //Vamos a crear el Upsert Post Action
         [HttpPost]
-        [ValidateAntiForgeryToken] //Sirve para evitar las falsificaciones de solicitudes de un sitio cargado normalmente de otra pagina
-        public async Task<IActionResult> Upsert(DatosBancarios datosBancarios)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Upsert(DatosBancariosVM datosBancariosVM)
         {
-            if (ModelState.IsValid) //validamos que todas las propiedades del modelo sean validas
+            if (ModelState.IsValid)
             {
-                if (datosBancarios.IdDatosBancarios == 0)
+                try
                 {
-                    await _unidadTrabajo.DatosBancarios.Agregar(datosBancarios);
-                    TempData[DS.Exitosa] = "Datos Bancarios Creados Exitosamente";
+                    if (datosBancariosVM.datosBancarios.IdDatosBancarios == 0)
+                    {
+                        await _unidadTrabajo.DatosBancarios.Agregar(datosBancariosVM.datosBancarios);
+                        TempData[DS.Exitosa] = "Datos Bancarios Creados Exitosamente";
+                    }
+                    else
+                    {
+                        _unidadTrabajo.DatosBancarios.Actualizar(datosBancariosVM.datosBancarios);
+                        TempData[DS.Exitosa] = "Datos Bancarios Actualizados Exitosamente";
+                    }
+                    await _unidadTrabajo.Guardar();
+                    return RedirectToAction(nameof(Index));
                 }
-                else
+                catch (Exception ex)
                 {
-                    _unidadTrabajo.DatosBancarios.Actualizar(datosBancarios);
-                    TempData[DS.Exitosa] = "Datos Bancarios Actualizados Exitosamente";
+                    // Aquí puedes registrar el error en algún registro o mostrarlo en la consola para depuración.
+                    Console.WriteLine($"Error: {ex.Message}");
+                    TempData[DS.Error] = "Error al procesar la solicitud";
                 }
-                await _unidadTrabajo.Guardar();
-                return RedirectToAction(nameof(Index));
             }
+            else
+            {
+                // Aquí puedes obtener detalles sobre los errores de validación.
+                var errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage));
+                Console.WriteLine("Errores de validación: " + string.Join(", ", errors));
+            }
+
             TempData[DS.Error] = "Error al Grabar Datos Bancarios";
-            return View(datosBancarios); //si el modelo no es valido, hacemos un return a la misma vista y le mandamos empleado.
+            datosBancariosVM.EmpleadoLista = _unidadTrabajo.DatosBancarios.ObtenerTodosDropdownLista("Empleado");
+            return View(datosBancariosVM);
         }
+
+
         #region API
         [HttpGet]
         //El codigo de la region sirve mas que nada para poner comentarios
         public async Task<IActionResult> ObtenerTodos()
         {
-            var todos = await _unidadTrabajo.DatosBancarios.ObtenerTodos(); //El metodo obtener todos trae una lista
+            var todos = await _unidadTrabajo.DatosBancarios.ObtenerTodos(incluirPropiedades: "Empleado"); //El metodo obtener todos trae una lista
             return Json(new { data = todos }); //todos tiene la lista de datos bancarios, data lo referenciaremos desde el javascript
         }
         [HttpPost]

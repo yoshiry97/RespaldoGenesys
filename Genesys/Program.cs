@@ -15,7 +15,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-builder.Services.AddScoped<IUnidadTrabajo, UnidadTrabajo>();
+builder.Services.AddScoped<IUnidadTrabajo, UnidadTrabajo>(); //Se agrega el servicio de la Unidad de Trabajo para que sea accesible en el proyecto
 
 var app = builder.Build();
 

@@ -10,6 +10,6 @@ namespace Genesys.Utilidades
     {
         public const string Exitosa = "Exitosa";
         public const string Error = "Error";
-        public const string ImagenDocumentosRuta = @"\imagenes\documentos";
+        public const string ImagenDocumentosRuta = @"\imagenes\documentos\";
     }
 }

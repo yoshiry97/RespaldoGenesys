@@ -6652,11 +6652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj",
+      "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Modelos\\Genesys.Modelos.csproj",
       "projectName": "Genesys.Modelos",
-      "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\Genesys.Modelos.csproj",
+      "projectPath": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Modelos\\Genesys.Modelos.csproj",
       "packagesPath": "C:\\Users\\yoshy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Modelos\\obj\\",
+      "outputPath": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Modelos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yoshy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6673,8 +6673,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
-              "projectPath": "C:\\Users\\yoshy\\source\\repos\\GenesysGit\\GenesysProyecto\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
+            "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj": {
+              "projectPath": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj"
             }
           }
         }

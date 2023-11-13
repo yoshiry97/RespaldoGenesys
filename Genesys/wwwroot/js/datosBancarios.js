@@ -31,7 +31,11 @@ function loadDataTable() {
             { "data": "numeroCuenta" },
             { "data": "clabeInterbancaria" },
             { "data": "prestamos" },
-            { "data": "idEmpleado" },
+            {
+                "render": function (data, type, row, meta) {
+                    return row.empleado.nombres+ " " + row.empleado.apPaterno + " "+ row.empleado.apMaterno;
+                }
+            },
             {
                 "data": "statusDatosBancarios", //como estado es booleana creamos una funcion para imprimir activo (true) o inactivo(false)
                 "render": function (data) {//para eso usamos la funcion render y armamos la funcion, mandando data como parametro

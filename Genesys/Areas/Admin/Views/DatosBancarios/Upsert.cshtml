@@ -1,28 +1,27 @@
 ﻿
-@model Genesys.Modelos.DatosBancarios //como recibe al modelo bodega seleccionamos el proyecto donde esta el modelo
+@model Genesys.Modelos.ViewModels.DatosBancariosVM //como recibe al modelo bodega seleccionamos el proyecto donde esta el modelo
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     var titulo = "Crear Dato Bancario"; //Creamos una variable titulo que va a cambiar de acuerdo a lo que estemos haciendo
 }
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 @*Vamos a crear el formulario donde van a estar todos nuestros inputs, ya que vamos a mandar informacion, le vamos a poner el metodo post*@
 <form method="post">
     <div style="padding-left:15%; padding-right:15%; padding-bottom:inherit.4rem;">
-        <div class="row border-0">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div> @*le decimos que todas las validaciones que tenga el modelo se muestren en este div*@
-        </div>
+       
         @*usamos c# para preguntar si el ide es =! de cero que cambie el titulo, como es c# se inicia con arroba*@
-        @if (Model.IdDatosBancarios != 0)
+        
+        @if (Model.datosBancarios.IdDatosBancarios != 0)
         {
             //Actualizar
             titulo = "Actualizar Datos Bancarios";
-            <input type="hidden" asp-for="IdDatosBancarios" />
+            <input asp-for="datosBancarios.IdDatosBancarios" hidden />
             //no quiero que el id se vea pero hay que mandarlo, asp-for deja entrar a las propiedades del modelo, en este caso id
         }
+        <div class="row border-0">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div> @*le decimos que todas las validaciones que tenga el modelo se muestren en este div*@
+        </div>
         <div class="col-12 border-bottom p-0">
             <h2 class="text-primary">@titulo</h2> <!--Accedemos a la variable titulo de c# mediante arroba titulo-->
         </div>
@@ -31,41 +30,43 @@
         <div class="row mb-2 mt-2">
             <div class="form-group col-md-6">
                 <label>Nombre del Banco</label>
-                <input type="text" asp-for="NombreBanco" class="form-control" placeholder="Nombre del Banco" />
-                <span asp-validation-for="NombreBanco" class="text-danger"></span> <!--Si el campo nombres es requerido nos avisa-->
+                <input type="text" asp-for="datosBancarios.NombreBanco" class="form-control" placeholder="Nombre del Banco" />
+                <span asp-validation-for="datosBancarios.NombreBanco" class="text-danger"></span> <!--Si el campo nombres es requerido nos avisa-->
             </div>
         </div>
         <div class="row mb-2 mt-2">
             <div class="form-group col-md-6">
                 <label>Número de cuenta</label>
-                <input type="text" asp-for="NumeroCuenta" class="form-control" placeholder="Número de cuenta" />
-                <span asp-validation-for="NumeroCuenta" class="text-danger"></span>
+                <input type="text" asp-for="datosBancarios.NumeroCuenta" class="form-control" placeholder="Número de cuenta" />
+                <span asp-validation-for="datosBancarios.NumeroCuenta" class="text-danger"></span>
             </div>
         </div>
         <div class="row mb-2 mt-2">
             <div class="form-group col-md-6">
                 <label>Clabe Interbancaria</label>
-                <input type="text" asp-for="ClabeInterbancaria" class="form-control" placeholder="Clabe Interbancaria" />
-                <span asp-validation-for="ClabeInterbancaria" class="text-danger"></span>
+                <input type="text" asp-for="datosBancarios.ClabeInterbancaria" class="form-control" placeholder="Clabe Interbancaria" />
+                <span asp-validation-for="datosBancarios.ClabeInterbancaria" class="text-danger"></span>
             </div>
         </div>
         <div class="row mb-2 mt-2">
             <div class="form-group col-md-6">
                 <label>Préstamos</label>
-                <input type="text" asp-for="Prestamos" class="form-control" placeholder="Préstamos" />
-                <span asp-validation-for="Prestamos" class="text-danger"></span> <!--Si el campo nombres es requerido nos avisa-->
+                <input type="text" asp-for="datosBancarios.Prestamos" class="form-control" placeholder="Préstamos" />
+                <span asp-validation-for="datosBancarios.Prestamos" class="text-danger"></span> <!--Si el campo nombres es requerido nos avisa-->
             </div>
         </div>
         <div class="row mb-2 mt-2">
             <div class="form-group col-md-6">
                 <label>IdEmpleado</label>
-                <input type="text" asp-for="IdEmpleado" class="form-control" placeholder="Id del Empleado" />
-                <span asp-validation-for="IdEmpleado" class="text-danger"></span> <!--Si el campo nombres es requerido nos avisa-->
+                <select asp-for="datosBancarios.IdEmpleado" asp-items="@Model.EmpleadoLista" class="form-select">
+                    <option disabled selected>-- Seleccione un Empleado --</option>
+                </select>
+                <span asp-validation-for="datosBancarios.IdEmpleado" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label>Status del Dato Bancario</label>
-            <select asp-for="StatusDatosBancarios" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+            <select asp-for="datosBancarios.StatusDatosBancarios" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
                 <option value="true">Activo</option>
                 <option value="false">Inactivo</option>
             </select>
@@ -73,9 +74,9 @@
         <br />
         @*Vamos ahora a llamar las vistas parciales*@
         <div>
-            @if (Model.IdDatosBancarios != 0)
+            @if (Model.datosBancarios.IdDatosBancarios != 0)
             {
-                <partial name="_BotonesActualizarYRegresar" model="Model.IdDatosBancarios" />
+                <partial name="_BotonesActualizarYRegresar" model="Model.datosBancarios.IdDatosBancarios" />
             }
             else
             {

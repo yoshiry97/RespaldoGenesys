@@ -17,7 +17,7 @@ namespace Genesys.AccesoDatos.Repositorio
         {
             _db = db;
         }
-        public void Actualizar (Empleado empleado)
+        public void Actualizar(Empleado empleado)
         {
             var empleadoBD = _db.Empleados.FirstOrDefault(b => b.IdEmpleado == empleado.IdEmpleado);
             if (empleadoBD != null)
@@ -25,12 +25,12 @@ namespace Genesys.AccesoDatos.Repositorio
                 empleadoBD.Nombres = empleado.Nombres;
                 empleadoBD.ApPaterno = empleado.ApPaterno;
                 empleadoBD.ApMaterno = empleado.ApMaterno;
-                empleadoBD.FechaNacimiento = empleado.FechaNacimiento;
+                empleadoBD.FechaNacimiento = (DateTime)empleado.FechaNacimiento;
                 empleadoBD.NSS = empleado.NSS;
                 empleadoBD.CURP = empleado.CURP;
                 empleadoBD.Email = empleado.Email;
                 empleadoBD.IdPuesto = empleado.IdPuesto;
-                empleadoBD.FechaIngreso = empleado.FechaIngreso;
+                empleadoBD.FechaIngreso = (DateTime)empleado.FechaIngreso;
                 empleadoBD.TipoNomina = empleado.TipoNomina;
                 empleadoBD.IdPlanta = empleado.IdPlanta;
                 empleadoBD.Turno = empleado.Turno;

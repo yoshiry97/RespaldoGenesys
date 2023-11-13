@@ -27,7 +27,11 @@ function loadDataTable() {
         },
         "columns": [ // en la seccion columnas se renderizan las columnas o propiedades de la tabla
             { "data": "nombreDocumento" },
-            { "data": "empleado.nombre" },
+            {
+                "render": function (data, type, row, meta) {
+                    return row.empleado.nombres + " " + row.empleado.apPaterno + " " + row.empleado.apMaterno;
+                }
+            },
             {
                 "data": "statusDocumento",
                 "render": function (data) {
@@ -35,22 +39,21 @@ function loadDataTable() {
                 }
             },
             {
-                "data": "idDocumentos", //la columna vacia tiene que ver con los botones, le pasamos el id de data mediante un render
-                "render": function (data) {//data  trae el id del modelo... para aparecer las comillas invertidas usamos alt96
+                "data": "idDocumento", //la columna vacia tiene que ver con los botones, le pasamos el id de data mediante un render
+                "render": function (data, type, row, meta) {//data  trae el id del modelo... para aparecer las comillas invertidas usamos alt96
                     //esto es para renderizar codigo html
                     return ` 
                         <div class="text-center">
-                            <a href="/Admin/Documentos/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer"> 
+                            <a href="/Admin/Documentos/Upsert/${row.idDocumento}" class="btn btn-success text-white" style="cursor:pointer"> 
                                 <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a onclick=Delete("/Admin/Documentos/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
+                            <a onclick=Delete("/Admin/Documentos/Delete/${row.idDocumento}") class="btn btn-danger text-white" style="cursor:pointer">
                                 <i class="bi bi-trash3-fill"></i>
                             </a>
                         </div>
                     `;
                 },
             }
-
         ]
     });
 }

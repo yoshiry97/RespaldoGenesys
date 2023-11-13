@@ -28,7 +28,8 @@ namespace Genesys.Areas.Admin.Controllers
             };
             if (id == null)
             {
-                //Crear un nuevo producto
+                //Crear un nuevo empleado
+                empleadoVM.Empleado.StatusEmpleado = true;
                 return View(empleadoVM);
             }
             else
@@ -44,32 +45,36 @@ namespace Genesys.Areas.Admin.Controllers
         //Vamos a crear el Upsert Post Action
         [HttpPost]
         [ValidateAntiForgeryToken] //Sirve para evitar las falsificaciones de solicitudes de un sitio cargado normalmente de otra pagina
-        public async Task<IActionResult> Upsert(Empleado empleado)
+        public async Task<IActionResult> Upsert(EmpleadoVM empleadoVM)
         {
             if (ModelState.IsValid) //validamos que todas las propiedades del modelo sean validas
             {
-                if (empleado.IdEmpleado == 0)
+                if (empleadoVM.Empleado.IdEmpleado == 0)
                 {
-                    await _unidadTrabajo.Empleado.Agregar(empleado) ;
+                    
+                    await _unidadTrabajo.Empleado.Agregar(empleadoVM.Empleado);
                     TempData[DS.Exitosa] = "Empleado Creado Exitosamente";
                 }
                 else
                 {
-                    _unidadTrabajo.Empleado.Actualizar(empleado);
+                    _unidadTrabajo.Empleado.Actualizar(empleadoVM.Empleado);
                     TempData[DS.Exitosa] = "Empleado Actualizado Exitosamente";
                 }
                 await _unidadTrabajo.Guardar();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
+
+            empleadoVM.PuestoLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Puesto");
+            empleadoVM.PlantaLista = _unidadTrabajo.Empleado.ObtenerTodosDropdownLista("Planta");
             TempData[DS.Error] = "Error al Grabar Empleado";
-            return View(empleado); //si el modelo no es valido, hacemos un return a la misma vista y le mandamos empleado.
+            return View(empleadoVM); //si el modelo no es valido, hacemos un return a la misma vista y le mandamos empleado.
         }
         #region API
         [HttpGet]
         //El codigo de la region sirve mas que nada para poner comentarios
         public async Task<IActionResult> ObtenerTodos()
         {
-            var todos = await _unidadTrabajo.Empleado.ObtenerTodos(incluirPropiedades:"Puesto,Planta"); //El metodo obtener todos trae una lista
+            var todos = await _unidadTrabajo.Empleado.ObtenerTodos(incluirPropiedades: "Puesto,Planta"); //El metodo obtener todos trae una lista
             return Json(new { data = todos }); //todos tiene la lista de empleados, data lo referenciaremos desde el javascript
         }
         [HttpPost]
@@ -84,7 +89,7 @@ namespace Genesys.Areas.Admin.Controllers
             await _unidadTrabajo.Guardar();
             return Json(new { success = true, message = "Empleado eliminado exitosamente" });
         }
-       
+
         #endregion
     }
 

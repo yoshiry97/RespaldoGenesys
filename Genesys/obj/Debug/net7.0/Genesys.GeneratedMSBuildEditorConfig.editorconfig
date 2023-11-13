@@ -9,113 +9,113 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Genesys
 build_property.RootNamespace = Genesys
-build_property.ProjectDir = C:\Users\yoshy\source\repos\GenesysGit\GenesysProyecto\Genesys\
+build_property.ProjectDir = C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\yoshy\source\repos\GenesysGit\GenesysProyecto\Genesys
+build_property.MSBuildProjectDirectory = C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/DatosBancarios/Index.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/DatosBancarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGF0b3NCYW5jYXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/DatosBancarios/Upsert.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/DatosBancarios/Upsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGF0b3NCYW5jYXJpb3NcVXBzZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Documentos/Index.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Documentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9jdW1lbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Documentos/Upsert.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Documentos/Upsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG9jdW1lbnRvc1xVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Empleado/Index.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Empleado/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbGVhZG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Empleado/Upsert.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Empleado/Upsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbGVhZG9cVXBzZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Planta/Index.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Planta/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGxhbnRhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Planta/Upsert.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Planta/Upsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGxhbnRhXFVwc2VydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Puesto/Index.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Puesto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHVlc3RvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/Puesto/Upsert.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/Puesto/Upsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHVlc3RvXFVwc2VydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Directorio/Views/Home/Index.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Directorio/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlyZWN0b3Jpb1xWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Directorio/Views/Home/Privacy.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Directorio/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlyZWN0b3Jpb1xWaWV3c1xIb21lXFByaXZhY3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Directorio/Views/_ViewImports.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Directorio/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlyZWN0b3Jpb1xWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Directorio/Views/_ViewStart.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Directorio/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlyZWN0b3Jpb1xWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/Shared/Error.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/Shared/_BotonesActualizarYRegresar.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/Shared/_BotonesActualizarYRegresar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb3RvbmVzQWN0dWFsaXphcllSZWdyZXNhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/Shared/_BotonesCrearYRegresar.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/Shared/_BotonesCrearYRegresar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb3RvbmVzQ3JlYXJZUmVncmVzYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/Shared/_Notificaciones.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/Shared/_Notificaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYWNpb25lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/_ViewImports.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/_ViewStart.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yoshy/source/repos/GenesysGit/GenesysProyecto/Genesys/Views/Shared/_Layout.cshtml]
+[C:/Users/yoshy/source/repos/RespaldoGenesys/Genesys/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l3kwfrqckz

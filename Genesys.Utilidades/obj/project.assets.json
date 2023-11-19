@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yoshy\\Source\\Repos\\RespaldoGenesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
+      "projectUniqueName": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
       "projectName": "Genesys.Utilidades",
-      "projectPath": "C:\\Users\\yoshy\\Source\\Repos\\RespaldoGenesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
+      "projectPath": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Utilidades\\Genesys.Utilidades.csproj",
       "packagesPath": "C:\\Users\\yoshy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yoshy\\Source\\Repos\\RespaldoGenesys\\Genesys.Utilidades\\obj\\",
+      "outputPath": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys.Utilidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yoshy\\AppData\\Roaming\\NuGet\\NuGet.Config",

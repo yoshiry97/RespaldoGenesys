@@ -17,6 +17,8 @@ namespace Genesys.AccesoDatos.Repositorio
         public IPuestoRepositorio Puesto { get; private set; }
         public IDocumentosRepositorio Documentos { get; private set; }
         public IDatosBancariosRepositorio DatosBancarios { get; private set; }
+        public IUsuarioAplicacionRepositorio UsuarioAplicacion { get; private set; }
+
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
@@ -25,7 +27,9 @@ namespace Genesys.AccesoDatos.Repositorio
             Puesto = new PuestoRepositorio(_db);
             Documentos = new DocumentosRepositorio(_db);
             DatosBancarios = new DatosBancariosRepositorio(_db);
+            UsuarioAplicacion = new UsuarioAplicacionRepositorio(_db);
         }
+
         public void Dispose()
         {
             _db.Dispose();

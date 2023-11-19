@@ -16,6 +16,7 @@ namespace Genesys.AccesoDatos.Data
         public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Documentos> Documentos { get; set; }
         public DbSet<DatosBancarios> DatosBancarios { get; set; }
+        public DbSet<UsuarioAplicacion> UsuarioAplicacions { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

@@ -3435,6 +3435,7 @@
       "Genesys.Modelos/1.0.0": {
         "dependencies": {
           "Genesys.Utilidades": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.13",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0"
         },
         "runtime": {
@@ -3445,6 +3446,9 @@
         }
       },
       "Genesys.Utilidades/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "7.0.13"
+        },
         "runtime": {
           "Genesys.Utilidades.dll": {}
         },

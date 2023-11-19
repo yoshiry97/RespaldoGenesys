@@ -128,7 +128,7 @@ namespace Genesys.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "El usuario no ha sido registrado o la cuenta no ha sido confirmada");
                     return Page();
                 }
             }

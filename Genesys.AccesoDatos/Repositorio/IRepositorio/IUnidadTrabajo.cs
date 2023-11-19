@@ -13,6 +13,7 @@ namespace Genesys.AccesoDatos.Repositorio.IRepositorio
         IPuestoRepositorio Puesto { get; }
         IDocumentosRepositorio Documentos { get; }
         IDatosBancariosRepositorio DatosBancarios { get; }
+        IUsuarioAplicacionRepositorio UsuarioAplicacion { get; }
         Task Guardar();
     }
 }

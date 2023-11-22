@@ -8,6 +8,7 @@ using System.Data;
 
 namespace Genesys.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [Authorize(Roles = DS.Role_Admin + "," + DS.Role_Auxiliar + "," + DS.Role_Gerente)]
 
     public class EmpleadoController : Controller

@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Genesys.Utilidades
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -58,5 +60,17 @@
                 </div>
             </div>
         </div>
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-purple">Usuarios</h5>
+                    <p class="card-text" style="font-size: 18px;">Administre información de usuarios.</p>
+                    <a href="/Admin/Usuario" class="btn btn-purple btn-lg">Ir a Usuarios</a>
+                </div>
+            </div>
+        </div>
+        }
     </div>
 </div>

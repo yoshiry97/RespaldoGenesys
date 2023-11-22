@@ -1,11 +1,14 @@
 ﻿using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Genesys.Modelos;
 using Genesys.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Genesys.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = DS.Role_Admin + "," + DS.Role_Auxiliar + "," + DS.Role_Gerente)]
     public class PlantaController : Controller
     {
         private readonly IUnidadTrabajo _unidadTrabajo;

@@ -2,11 +2,13 @@
 using Genesys.Modelos;
 using Genesys.Modelos.ViewModels;
 using Genesys.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Genesys.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = DS.Role_Admin + "," + DS.Role_Auxiliar)]
     public class DatosBancariosController : Controller
     {
         private readonly IUnidadTrabajo _unidadTrabajo;

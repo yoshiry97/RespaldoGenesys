@@ -13,6 +13,7 @@ namespace Genesys.Utilidades
         public const string ImagenDocumentosRuta = @"\imagenes\documentos\";
         public const string Role_Admin = "Admin";
         public const string Role_Gerente = "Gerente";
-
+        public const string Role_Invitado = "Invitado";
+        public const string Role_Auxiliar = "Auxiliar";
     }
 }

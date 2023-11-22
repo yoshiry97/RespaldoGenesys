@@ -4,6 +4,7 @@
 $(document).ready(function () {
     loadDataTable(); //Llamamos a la funcion loadDataTable
 });
+
 //Creamos la funcion loadDataTable
 function loadDataTable() {
     datatable = $('#tblDatos').DataTable({ //capturamos el id de nuestra tabla de la vista razor por medio de jquery

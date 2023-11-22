@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AGm85cKtZ41HWglTVnA2nQyJWIPW3cv3FdDIaUTzAmg=",
+  "Hash": "uRAXOau9exdXqp7nG1d9hLcfeFrecy6NvLxYFkeHOWA=",
   "Source": "Genesys",
   "BasePath": "_content/Genesys",
   "Mode": "Default",
@@ -1307,6 +1307,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\js\\usuario.js",
+      "SourceId": "Genesys",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\",
+      "BasePath": "_content/Genesys",
+      "RelativePath": "js/usuario.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\usuario.js"
     },
     {
       "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -2,9 +2,11 @@
 using Genesys.Modelos;
 using Genesys.Modelos.ViewModels;
 using Genesys.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using System.Linq.Expressions;
 using System.Text;
 
@@ -12,7 +14,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Genesys.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Authorize(Roles = DS.Role_Admin + "," + DS.Role_Auxiliar)]
     public class DocumentosController : Controller
     {
         private readonly IUnidadTrabajo _unidadTrabajo;

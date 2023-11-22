@@ -92,9 +92,9 @@ namespace Genesys.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} caracteres y máximo {1} caracter de longitud.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Contraseña")]
             public string Password { get; set; }
 
             /// <summary>
@@ -102,10 +102,9 @@ namespace Genesys.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Display(Name = "Confirmar contraseña")]
+            [Compare("Password", ErrorMessage = "La contraseña no coincide")]
             public string ConfirmPassword { get; set; }
-
             [Required]
             public string Nombres { get; set; }
             [Required]
@@ -120,7 +119,7 @@ namespace Genesys.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
             Input = new InputModel()
             {
-                ListaRol = _roleManager.Roles.Select(n=> n.Name).Select(l => new SelectListItem
+                ListaRol = _roleManager.Roles.Where(r=> r.Name!=DS.Role_Invitado).Select(n=> n.Name).Select(l => new SelectListItem
                 {
                     Text = l,
                     Value = l
@@ -161,8 +160,22 @@ namespace Genesys.Areas.Identity.Pages.Account
                     {
                         await _roleManager.CreateAsync(new IdentityRole(DS.Role_Gerente));
                     }
-
-                    await _userManager.AddToRoleAsync(user, DS.Role_Admin);
+                    if (!await _roleManager.RoleExistsAsync(DS.Role_Auxiliar))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(DS.Role_Auxiliar));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(DS.Role_Invitado))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(DS.Role_Invitado));
+                    }
+                    if (user.Role == null)
+                    {
+                        await _userManager.AddToRoleAsync(user, DS.Role_Invitado);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, user.Role);
+                    }
 
 
                     var userId = await _userManager.GetUserIdAsync(user);
@@ -183,10 +196,27 @@ namespace Genesys.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        if (user.Role==null)
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                            return LocalRedirect(returnUrl);
+                        }
+                        else
+                        {
+                            //Adminsitrador esta registrando un nuevo usuario
+                            return RedirectToAction("Index", "Usuario", new {Area = "Admin"});
+                        }
+
                     }
                 }
+                Input = new InputModel()
+                {
+                    ListaRol = _roleManager.Roles.Select(n => n.Name).Select(l => new SelectListItem
+                    {
+                        Text = l,
+                        Value = l
+                    })
+                };
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);

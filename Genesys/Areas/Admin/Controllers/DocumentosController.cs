@@ -14,6 +14,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Genesys.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [Authorize(Roles = DS.Role_Admin + "," + DS.Role_Auxiliar)]
     public class DocumentosController : Controller
     {

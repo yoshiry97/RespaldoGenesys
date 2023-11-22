@@ -7,7 +7,7 @@
 <div class="container mt-5">
     <div class="text-center">
         <h1 class="display-4 text-purple">Bienvenido</h1>
-        <p>Seleccione una categoría:</p>
+        <p>Seleccione una categoría</p>
     </div>
 
     <div class="row mt-4 justify-content-center">
@@ -62,15 +62,15 @@
         </div>
         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
         {
-        <div class="col-md-6 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-purple">Usuarios</h5>
-                    <p class="card-text" style="font-size: 18px;">Administre información de usuarios.</p>
-                    <a href="/Admin/Usuario" class="btn btn-purple btn-lg">Ir a Usuarios</a>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-purple">Usuarios</h5>
+                        <p class="card-text" style="font-size: 18px;">Administre información de usuarios.</p>
+                        <a href="/Admin/Usuario" class="btn btn-purple btn-lg">Ir a Usuarios</a>
+                    </div>
                 </div>
             </div>
-        </div>
         }
     </div>
 </div>

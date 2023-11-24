@@ -78,7 +78,8 @@ namespace Genesys.Areas.Admin.Controllers
         //El codigo de la region sirve mas que nada para poner comentarios
         public async Task<IActionResult> ObtenerTodos()
         {
-            var todos = await _unidadTrabajo.Empleado.ObtenerTodos(incluirPropiedades: "Puesto,Planta"); //El metodo obtener todos trae una lista
+            
+            var todos = await _unidadTrabajo.Empleado.ObtenerTodos(filtro: x=> x.StatusEmpleado==true, incluirPropiedades: "Puesto,Planta"); //El metodo obtener todos trae una lista
             return Json(new { data = todos }); //todos tiene la lista de empleados, data lo referenciaremos desde el javascript
         }
         [HttpPost]
@@ -89,7 +90,8 @@ namespace Genesys.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Error al borrar empleado" });
             }
-            _unidadTrabajo.Empleado.Remover(empleadoDb);
+            empleadoDb.StatusEmpleado = false;
+            _unidadTrabajo.Empleado.Actualizar(empleadoDb);
             await _unidadTrabajo.Guardar();
             return Json(new { success = true, message = "Empleado eliminado exitosamente" });
         }

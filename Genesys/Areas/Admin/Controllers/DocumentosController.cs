@@ -125,7 +125,7 @@ namespace Genesys.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> ObtenerTodos()
         {
-            var todos = await _unidadTrabajo.Documentos.ObtenerTodos(incluirPropiedades:"Empleado"); //El metodo obtener todos trae una lista
+            var todos = await _unidadTrabajo.Documentos.ObtenerTodos(filtro: x=> x.StatusDocumento==true, incluirPropiedades:"Empleado"); //El metodo obtener todos trae una lista
             return Json(new { data = todos }); //todos tiene la lista de empleados, data lo referenciaremos desde el javascript
         }
         [HttpPost]

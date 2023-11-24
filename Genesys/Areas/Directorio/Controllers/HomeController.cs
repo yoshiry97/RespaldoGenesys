@@ -1,4 +1,5 @@
-﻿using Genesys.Modelos.ErrorViewModels;
+﻿using Microsoft.AspNetCore.Authorization;
+using Genesys.Modelos.ErrorViewModels;
 using Genesys.Modelos.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -17,6 +18,15 @@ namespace Genesys.Areas.Directorio.Controllers
 
         public IActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated )
+                return Redirect("/Identity/Account/Login");
+
+            if (User.Identity.IsAuthenticated && User.IsInRole("Gerente"))
+                return View("Gerente");
+
+            if (User.Identity.IsAuthenticated && User.IsInRole("Auxiliar"))
+                return View("Auxiliar");
+
             return View();
         }
 

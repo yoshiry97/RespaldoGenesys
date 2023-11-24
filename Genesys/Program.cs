@@ -5,6 +5,7 @@ using Genesys.AccesoDatos.Repositorio;
 using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Genesys.Utilidades;
+using Genesys.AccesoDatos.Inicializador;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,7 +51,7 @@ builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 //builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
-//builder.Services.AddScoped<IDbInicializador, DbInicializador>();
+builder.Services.AddScoped<IDbInicializador, DbInicializador>();
 
 var app = builder.Build();
 
@@ -73,6 +74,25 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Aplicar Migraciones y Datos Iniciales
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+
+    try
+    {
+        var inicializador = services.GetRequiredService<IDbInicializador>();
+        inicializador.Inicializar();
+    }
+    catch (Exception ex)
+    {
+
+        var logger = loggerFactory.CreateLogger<Program>();
+        logger.LogError(ex, "Un Error ocurrio al ejecutar la migracion");
+    }
+}
 
 
 app.MapControllerRoute(

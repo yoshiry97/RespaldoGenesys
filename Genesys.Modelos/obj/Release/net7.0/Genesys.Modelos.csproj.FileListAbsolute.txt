@@ -1,0 +1,15 @@
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\bin\Release\net7.0\Genesys.Modelos.deps.json
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\bin\Release\net7.0\Genesys.Modelos.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\bin\Release\net7.0\Genesys.Modelos.pdb
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\bin\Release\net7.0\Genesys.Utilidades.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\bin\Release\net7.0\Genesys.Utilidades.pdb
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.csproj.AssemblyReference.cache
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.AssemblyInfoInputs.cache
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.AssemblyInfo.cs
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.csproj.CopyComplete
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\refint\Genesys.Modelos.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\Genesys.Modelos.pdb
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.Modelos\obj\Release\net7.0\ref\Genesys.Modelos.dll

@@ -1,0 +1,217 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Estilo para el encabezado */
+h1, h2, h3, h4, h5, h6 {
+    color: #800080; /* Morado */
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Estilo para los párrafos */
+p {
+    color: #800080; /* Morado */
+    font-family: 'Raleway', sans-serif;
+}
+
+.text-purple {
+    color: #6f42c1;
+}
+
+.card {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-purple {
+    background-color: #6f42c1;
+    color: #fff;
+    border: 1px solid #6f42c1;
+}
+
+    .btn-purple:hover {
+        background-color: #5a2f9e;
+        border: 1px solid #5a2f9e;
+    }
+
+.bg-light {
+    background-color: #f8f9fa; /* Gris claro */
+}
+
+/* Márgenes */
+.mt-5 {
+    margin-top: 3rem; /* Ajusta según tus necesidades */
+}
+
+.texto-morado {
+    color: #603c9d; /* Puedes cambiar este código de color según tus preferencias */
+}
+
+.btn-outline-morado {
+    background-color: #603c9d; /* Morado */
+    color: #fff; /* Texto en color blanco para contrastar */
+    border-color: #6f42c1; /* Borde del mismo color que el fondo */
+}
+
+    /* Al pasar el ratón sobre el botón, puedes cambiar los estilos si lo deseas */
+    .btn-outline-morado:hover {
+        background-color: #5a2f9e; /* Un tono más claro de morado al pasar el ratón */
+        border-color: #5a2f9e; /* Borde del mismo color que el fondo al pasar el ratón */
+        color: #fff; /* Texto en color blanco al pasar el ratón */
+    }
+
+.table-morada {
+    background-color: #603c9d; /* Morado */
+    color: #fff; /* Texto en color blanco para contrastar */
+    html
+
+{
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Estilo para el encabezado */
+h1, h2, h3, h4, h5, h6 {
+    color: #800080; /* Morado */
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Estilo para los párrafos */
+p {
+    color: #800080; /* Morado */
+    font-family: 'Raleway', sans-serif;
+}
+
+.text-purple {
+    color: #6f42c1;
+}
+
+.card {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-purple {
+    background-color: #6f42c1;
+    border: 1px solid #6f42c1;
+    color: #fff; /* Texto en color blanco para contrastar */
+    font-family: 'Raleway', sans-serif;
+}
+
+    .btn-purple:hover {
+        background-color: #5a2f9e;
+        border: 1px solid #5a2f9e;
+    }
+
+.btn-outline-morado {
+    background-color: #603c9d;
+    color: #fff;
+    border-color: #6f42c1;
+}
+
+    .btn-outline-morado:hover {
+        background-color: #5a2f9e;
+        border-color: #5a2f9e;
+        color: #fff;
+    }
+
+.bg-light {
+    background-color: #f8f9fa; /* Gris claro */
+}
+
+/* Márgenes */
+.mt-5 {
+    margin-top: 3rem; /* Ajusta según tus necesidades */
+}
+
+.texto-morado {
+    color: #603c9d; /* Puedes cambiar este código de color según tus preferencias */
+}
+
+.btn-outline-morado {
+    background-color: #603c9d; /* Morado */
+    color: #fff; /* Texto en color blanco para contrastar */
+    border-color: #6f42c1; /* Borde del mismo color que el fondo */
+}
+
+    /* Al pasar el ratón sobre el botón, puedes cambiar los estilos si lo deseas */
+    .btn-outline-morado:hover {
+        background-color: #5a2f9e; /* Un tono más claro de morado al pasar el ratón */
+        border-color: #5a2f9e; /* Borde del mismo color que el fondo al pasar el ratón */
+        color: #fff; /* Texto en color blanco al pasar el ratón */
+    }
+
+.table-morada {
+    background-color: #603c9d; /* Morado */
+    color: #fff; /* Texto en color blanco para contrastar */
+    font-family: 'Raleway', sans-serif;
+}
+
+    /* También puedes cambiar otros estilos si es necesario */
+    .table-morada th, .table-morada td {
+        border-color: #6f42c1; /* Bordes en morado */
+    }
+
+    /* Si quieres cambiar el color de fondo de las filas al pasar el ratón */
+    .table-morada tbody tr:hover {
+        background-color: #825fbc; /* Un tono más claro de morado al pasar el ratón */
+    }

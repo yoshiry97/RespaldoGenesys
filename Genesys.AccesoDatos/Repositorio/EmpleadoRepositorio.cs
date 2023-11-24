@@ -2,6 +2,7 @@
 using Genesys.AccesoDatos.Repositorio.IRepositorio;
 using Genesys.Modelos;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace Genesys.AccesoDatos.Repositorio
                 _db.SaveChanges(); //Guarda los cambios en la base de datos
             }
         }
-
+  
         public IEnumerable<SelectListItem> ObtenerTodosDropdownLista(string obj)
         {
             if (obj == "Planta")

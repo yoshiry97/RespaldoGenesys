@@ -26,10 +26,7 @@
         }
         <div class="col-12 border-bottom p-0">
             <h2 class="form-title text-purple">@titulo</h2> <!--Accedemos a la variable titulo de c# mediante arroba titulo-->
-            @*Prueba para ver que recibe IdPlanta*@
-            <div>
-                <p>IdPlanta: @Model.IdPlanta</p>
-            </div>
+           
         </div>
 
         @*Ahora se pondran cada una de las propiedades*@
@@ -40,10 +37,10 @@
                 <span asp-validation-for="NombrePlanta" class="text-danger"></span> <!--Si el campo nombres es requerido nos avisa-->
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="display:none">
             <label>Status de la Planta</label>
             <select asp-for="StatusPlanta" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
-                <option value="true">Activo</option>
+                <option value="true" selected>Activo</option>
                 <option value="false">Inactivo</option>
             </select>
         </div>

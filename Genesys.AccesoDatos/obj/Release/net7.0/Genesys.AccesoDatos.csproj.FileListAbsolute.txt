@@ -1,0 +1,17 @@
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\bin\Release\net7.0\Genesys.AccesoDatos.deps.json
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\bin\Release\net7.0\Genesys.AccesoDatos.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\bin\Release\net7.0\Genesys.AccesoDatos.pdb
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\bin\Release\net7.0\Genesys.Modelos.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\bin\Release\net7.0\Genesys.Utilidades.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\bin\Release\net7.0\Genesys.Modelos.pdb
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\bin\Release\net7.0\Genesys.Utilidades.pdb
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.AssemblyInfo.cs
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.csproj.CopyComplete
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\refint\Genesys.AccesoDatos.dll
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\Genesys.AccesoDatos.pdb
+C:\Users\yoshy\source\repos\RespaldoGenesys\Genesys.AccesoDatos\obj\Release\net7.0\ref\Genesys.AccesoDatos.dll

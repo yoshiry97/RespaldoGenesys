@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uRAXOau9exdXqp7nG1d9hLcfeFrecy6NvLxYFkeHOWA=",
+  "Hash": "C0p2VT/1WY5/OgWAp5uMAbe+MNmK3hY+Uf3hxvkbScM=",
   "Source": "Genesys",
   "BasePath": "_content/Genesys",
   "Mode": "Default",
@@ -1122,12 +1122,12 @@
       "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\5819822a-00d4-4d6a-8479-6c7e10a49f0b.JPG"
     },
     {
-      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\7654b874-1d11-4ccf-a360-f004c612579e.JPG",
+      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\7b14c194-deb1-4282-b859-9c209ec47507.pdf",
       "SourceId": "Genesys",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\",
       "BasePath": "_content/Genesys",
-      "RelativePath": "imagenes/documentos/7654b874-1d11-4ccf-a360-f004c612579e.JPG",
+      "RelativePath": "imagenes/documentos/7b14c194-deb1-4282-b859-9c209ec47507.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1136,7 +1136,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\7654b874-1d11-4ccf-a360-f004c612579e.JPG"
+      "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\7b14c194-deb1-4282-b859-9c209ec47507.pdf"
     },
     {
       "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\7e1cbb90-377e-442c-814a-c82ce2adb485.JPG",
@@ -1156,12 +1156,12 @@
       "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\7e1cbb90-377e-442c-814a-c82ce2adb485.JPG"
     },
     {
-      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG",
+      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\b7df7c91-f76e-4f42-8234-faf342f10c53.pdf",
       "SourceId": "Genesys",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\",
       "BasePath": "_content/Genesys",
-      "RelativePath": "imagenes/documentos/a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG",
+      "RelativePath": "imagenes/documentos/b7df7c91-f76e-4f42-8234-faf342f10c53.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1170,24 +1170,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\a0aeb2d5-c636-4949-9219-1fa20dafffc1.JPG"
-    },
-    {
-      "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\documentos\\b7920f82-11f1-47b1-abe7-1c3312159af7.JPG",
-      "SourceId": "Genesys",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\",
-      "BasePath": "_content/Genesys",
-      "RelativePath": "imagenes/documentos/b7920f82-11f1-47b1-abe7-1c3312159af7.JPG",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\b7920f82-11f1-47b1-abe7-1c3312159af7.JPG"
+      "OriginalItemSpec": "wwwroot\\imagenes\\documentos\\b7df7c91-f76e-4f42-8234-faf342f10c53.pdf"
     },
     {
       "Identity": "C:\\Users\\yoshy\\source\\repos\\RespaldoGenesys\\Genesys\\wwwroot\\imagenes\\logoGenesys.png",

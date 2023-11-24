@@ -128,10 +128,10 @@
                 <span asp-validation-for="Empleado.NumeroGafete" class="text-danger"></span>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="display: none;">
             <label>Status del Empleado</label>
             <select asp-for="Empleado.StatusEmpleado" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
-                <option value="true">Activo</option>
+                <option value="true" selected>Activo</option>
                 <option value="false">Inactivo</option>
             </select>
         </div>

@@ -18,4 +18,5 @@ namespace Genesys.Modelos
         public bool StatusPlanta { get; set; }
 
     }
+    
 }
